@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="2" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:background="#FCE4EC" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:textSize="30dp"
+            android:text="값 입력 : " />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:inputType="number"
+            android:layout_weight="3"
+            android:hint="　　"
+            android:textSize="30dp"
+            android:id="@+id/etEnterNumber"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="결정"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:onClick="onClickDecide" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:background="#E8EAF6" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="30dp"
+                android:text="컴퓨터 : " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="computer says.."
+                android:textSize="30dp"
+                android:id="@+id/tvComputerSays"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#F9FBE7"
+        android:gravity="center"
+        android:layout_weight="2" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTryCount"
+            android:text="시도 횟수 : _ _번"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="#E1F5FE"
+        android:layout_weight="1" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:layout_weight="2"
+            android:background="#FFF8E1"
+            android:gravity="top|center"
+            android:layout_gravity="center_horizontal"
+            android:text="입력한 수\n"
+            android:id="@+id/tvInputNumber" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:gravity="top|center"
+            android:id="@+id/tvCompareComments"
+            android:text="코멘트\n"/>
+
+        </LinearLayout>
+
+</LinearLayout>
+
+<!--컴퓨터는 0~100사이의 랜덤값을 지정하고 1~100 사이의 값을 사용자가 입력하면 -->
+<!--그것에 대한 결과를 알려준다.-->
+<!--컴퓨터가 생각한 값과 사용자의 입력값이 같으면 시도한 횟수를 함께 출력한다.-->
